@@ -15,7 +15,7 @@ If the bot crashes or behaves unexpectedly, **always check the log file** (`vint
 
 ---
 
-⭐ **Star this repo if you found it helpful!** ⭐(https://img.shields.io/badge/Python-3.8%2B-blue)
+⭐ **Star this repo if you found it helpful!** ⭐
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 
@@ -251,4 +251,5 @@ Having issues? Get help here:
 ---
 
 ⭐ **Star this repo if you found it helpful!** ⭐
+
 
