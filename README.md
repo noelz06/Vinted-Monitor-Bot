@@ -2,13 +2,6 @@
 
 A fast and efficient Vinted monitoring bot that tracks items and sends notifications via Telegram. **No proxies required** - runs smoothly with intelligent rate limiting and session management.
 
-![Pyth## 🆘 Support
-
-Having issues? Get help here:
-- 🐛 **GitHub Issues**: Report bugs or request features via [GitHub Issues](https://github.com/noelz06/vinted-monitor-bot/issues)
-- 👤 **GitHub**: Contact me directly [@noelz06](https://github.com/noelz06)
-- 💬 **Discord**: Reach out on Discord **noeel_1122**
-
 ### 🔍 Troubleshooting
 
 If the bot crashes or behaves unexpectedly, **always check the log file** (`vinted_bot.log`) first - it contains detailed error information that will help identify the issue. The log file is created in the same directory as the bot.
@@ -251,5 +244,6 @@ Having issues? Get help here:
 ---
 
 ⭐ **Star this repo if you found it helpful!** ⭐
+
 
 
