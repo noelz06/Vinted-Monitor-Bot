@@ -145,7 +145,7 @@ The bot stores everything in `config.json`:
 - **Async Operations**: Non-blocking HTTP requests for maximum speed
 
 ### Monitoring Frequency
-- Checks every **5 minutes** by default
+- Checks every **1 minutes** by default
 - Processes all searches simultaneously
 - Immediate Telegram notifications
 
@@ -244,6 +244,7 @@ Having issues? Get help here:
 ⭐ **Star this repo if you found it helpful!** ⭐
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+
 
 
 
