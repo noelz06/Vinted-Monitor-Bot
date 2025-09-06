@@ -8,10 +8,6 @@ If the bot crashes or behaves unexpectedly, **always check the log file** (`vint
 
 ---
 
-⭐ **Star this repo if you found it helpful!** ⭐
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
-
 ## ✨ Features
 <img width="525" height="662" alt="image" src="https://github.com/user-attachments/assets/53a5873b-5673-45e8-ad3a-11beab432aa6" />
 
@@ -246,6 +242,9 @@ Having issues? Get help here:
 ---
 
 ⭐ **Star this repo if you found it helpful!** ⭐
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+
 
 
 
