@@ -209,6 +209,29 @@ class SessionManager:
             except Exception as e:
                 logger.error(f"Cookie refresh error: {e}")
     
+    async def recreate_session(self):
+        async with self.session_lock:
+            try:
+                logger.info("Recreating session due to authentication error")
+                if self.session and not self.session.closed:
+                    await self.session.close()
+                
+                self.session = None
+                self.cookies = {}
+                self.headers = self.get_default_headers()
+                self.last_cookie_refresh = 0
+                
+                session = self.get_session()
+                async with session.get(self.base_url) as response:
+                    if response.status == 200:
+                        self.cookies.update(session.cookie_jar._cookies)
+                        self.last_cookie_refresh = time.time()
+                        logger.info(f"Session recreated successfully with {len(self.cookies)} cookies")
+                    else:
+                        logger.warning(f"Failed to recreate session: {response.status}")
+            except Exception as e:
+                logger.error(f"Session recreation error: {e}")
+    
     def get_headers(self, referer: str = None) -> Dict[str, str]:
         headers = self.headers.copy()
         if referer:
@@ -284,6 +307,12 @@ class VintedAPI:
                 elif response.status == 429:
                     logger.warning("Rate limited by Vinted API")
                     await asyncio.sleep(random.uniform(10, 20))
+                    return []
+                
+                elif response.status == 401:
+                    logger.warning("Unauthorized - recreating session")
+                    await self.session_manager.recreate_session()
+                    await asyncio.sleep(random.uniform(5, 10))
                     return []
                 
                 elif response.status == 403:
